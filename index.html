@@ -24,11 +24,11 @@
             height: 100%;
             position: relative;
         }
-        /* Positions text lower down and centered precisely under the globe alignment */
+        /* Positions text lower down and centered precisely right under the globe stand */
         .content {
             position: absolute;
-            top: 83%;   /* Keeps it at your preferred lower position */
-            left: 40%;  /* Nudges it slightly more to the left to match the center of the globe */
+            top: 84%;   /* Keeps it at your preferred lower height */
+            left: 46.5%; /* Perfectly shifts the center of the text right under the globe */
             transform: translate(-50%, -50%);
             color: #ffffff;
             padding: 10px;
@@ -51,7 +51,7 @@
             opacity: 0.95;
         }
         
-        /* Smooth reset for mobile phones so the text doesn't fall off the screen edge */
+        /* Smooth reset for mobile phones so it stays centered on small portrait screens */
         @media (max-width: 768px) {
             .content {
                 left: 50%;
