@@ -14,9 +14,9 @@
             height: 100%;
             font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
             overflow: hidden;
-            background-color: #1a1a1a; /* Seamless dark backdrop if needed */
+            background-color: #1a1a1a;
         }
-        /* Full-screen background configuration for DESKTOP */
+        /* 💻 PERFECT DESKTOP VIEW */
         .background-container {
             background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('globe.png');
             background-size: cover;
@@ -25,7 +25,7 @@
             height: 100%;
             position: relative;
         }
-        /* Positions text lower down and centered precisely right under the globe stand */
+        /* Desktop text placement precisely aligned under the globe */
         .content {
             position: absolute;
             top: 84%;   
@@ -52,23 +52,22 @@
             opacity: 0.95;
         }
         
-        /* 📱 MOBILE FIX: Applies ONLY to screens smaller than a tablet */
+        /* 📱 MOBILE FIX: Full-page background with smart focus shifting */
         @media (max-width: 768px) {
             .background-container {
-                /* "contain" forces the phone to show 100% of the image widthwise */
-                background-size: contain;
-                background-position: center 30%; /* Moves image up slightly to leave space for text */
+                background-size: cover; /* Forces the photo back to full-bleed, edge-to-edge screen cover */
+                background-position: 62% center; /* Shifts the frame rightward so the globe and chair are beautifully centered on mobile screens */
             }
             .content {
                 left: 50%;
-                top: 80%; /* Moves text into position below the fitted mobile image */
-                max-width: 100%;
+                top: 84%; 
+                max-width: 90%;
             }
             h1 {
-                font-size: 2.2rem; /* Scales text down slightly so it looks proportional on mobile */
+                font-size: 2.4rem; /* Scaled down slightly to perfectly frame portrait screens */
             }
             p {
-                font-size: 1.1rem;
+                font-size: 1.15rem;
             }
         }
     </style>
