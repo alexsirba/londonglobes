@@ -14,8 +14,9 @@
             height: 100%;
             font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
             overflow: hidden;
+            background-color: #1a1a1a; /* Seamless dark backdrop if needed */
         }
-        /* Full-screen background image configuration */
+        /* Full-screen background configuration for DESKTOP */
         .background-container {
             background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('globe.png');
             background-size: cover;
@@ -27,8 +28,8 @@
         /* Positions text lower down and centered precisely right under the globe stand */
         .content {
             position: absolute;
-            top: 84%;   /* Keeps it at your preferred lower height */
-            left: 46.5%; /* Perfectly shifts the center of the text right under the globe */
+            top: 84%;   
+            left: 46.5%; 
             transform: translate(-50%, -50%);
             color: #ffffff;
             padding: 10px;
@@ -51,12 +52,23 @@
             opacity: 0.95;
         }
         
-        /* Smooth reset for mobile phones so it stays centered on small portrait screens */
+        /* 📱 MOBILE FIX: Applies ONLY to screens smaller than a tablet */
         @media (max-width: 768px) {
+            .background-container {
+                /* "contain" forces the phone to show 100% of the image widthwise */
+                background-size: contain;
+                background-position: center 30%; /* Moves image up slightly to leave space for text */
+            }
             .content {
                 left: 50%;
-                top: 82%;
+                top: 80%; /* Moves text into position below the fitted mobile image */
                 max-width: 100%;
+            }
+            h1 {
+                font-size: 2.2rem; /* Scales text down slightly so it looks proportional on mobile */
+            }
+            p {
+                font-size: 1.1rem;
             }
         }
     </style>
