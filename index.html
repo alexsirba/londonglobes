@@ -24,38 +24,38 @@
             height: 100%;
             position: relative;
         }
-        /* Positions text lower down and nudged over to the left to align with the globe */
+        /* Positions text lower down and centered precisely under the globe alignment */
         .content {
             position: absolute;
-            top: 82%;   /* Keeps it nicely lower down on the screen */
-            left: 42%;  /* Moves it slightly left of center to align under the globe */
+            top: 83%;   /* Keeps it at your preferred lower position */
+            left: 40%;  /* Nudges it slightly more to the left to match the center of the globe */
             transform: translate(-50%, -50%);
             color: #ffffff;
-            padding: 20px;
-            width: 90%;
-            max-width: 500px;
+            padding: 10px;
+            width: 85%;
+            max-width: 450px;
             text-align: center;
         }
         h1 {
             font-size: 3rem;
-            margin: 0 0 8px 0;
+            margin: 0 0 6px 0;
             font-weight: 700;
             letter-spacing: -1px;
             text-shadow: 0 2px 8px rgba(0,0,0,0.7);
         }
         p {
-            font-size: 1.3rem;
+            font-size: 1.25rem;
             margin: 0;
             font-weight: 400;
             text-shadow: 0 2px 6px rgba(0,0,0,0.7);
             opacity: 0.95;
         }
         
-        /* Ensures layout shifts nicely back to center on small mobile devices */
-        @media (max-width: 600px) {
+        /* Smooth reset for mobile phones so the text doesn't fall off the screen edge */
+        @media (max-width: 768px) {
             .content {
                 left: 50%;
-                top: 80%;
+                top: 82%;
                 max-width: 100%;
             }
         }
