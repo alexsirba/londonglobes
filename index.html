@@ -15,15 +15,15 @@
             font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
             overflow: hidden;
         }
-        /* This handles the full-screen background image */
+        /* Full-screen background image configuration */
         .background-container {
-            background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('globe.png');
+            background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('globe.png');
             background-size: cover;
             background-position: center;
             background-repeat: no-repeat;
             height: 100%;
             display: flex;
-            align-items: center;
+            align-items: flex-end; /* Pushes the text container to the bottom */
             justify-content: center;
             text-align: center;
         }
@@ -31,20 +31,21 @@
             color: #ffffff;
             padding: 20px;
             max-width: 600px;
+            margin-bottom: 80px; /* Adjust this number to move text higher or lower from the very bottom edge */
         }
         h1 {
             font-size: 3rem;
             margin-bottom: 12px;
             font-weight: 700;
             letter-spacing: -1px;
-            text-shadow: 0 2px 4px rgba(0,0,0,0.4);
+            text-shadow: 0 2px 8px rgba(0,0,0,0.6);
         }
         p {
             font-size: 1.3rem;
             margin: 0;
-            font-weight: 300;
-            text-shadow: 0 2px 4px rgba(0,0,0,0.4);
-            opacity: 0.9;
+            font-weight: 400;
+            text-shadow: 0 2px 6px rgba(0,0,0,0.6);
+            opacity: 0.95;
         }
     </style>
 </head>
