@@ -14,8 +14,8 @@
             height: 100%;
             font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
             overflow: hidden;
+            background-color: #1a1a1a;
         }
-        
         /* 💻 PERFECT DESKTOP VIEW */
         .background-container {
             background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('globe.png');
@@ -31,6 +31,8 @@
             top: 84%;   
             left: 46.5%; 
             transform: translate(-50%, -50%);
+            color: #ffffff;
+            padding: 10px;
             width: 85%;
             max-width: 450px;
             text-align: center;
@@ -50,12 +52,11 @@
             opacity: 0.95;
         }
         
-        /* 📱 MOBILE FIX: Full Screen Image, No Bars, Fits Entire Width */
+        /* 📱 MOBILE FIX: Full-page background with smart focus shifting */
         @media (max-width: 768px) {
             .background-container {
-                /* Forces the background to stretch 100% wide and 100% tall to destroy all black bars */
-                background-size: 100% 100%; 
-                background-position: center center;
+                background-size: cover; /* Forces the photo back to full-bleed, edge-to-edge screen cover */
+                background-position: 62% center; /* Shifts the frame rightward so the globe and chair are beautifully centered on mobile screens */
             }
             .content {
                 left: 50%;
@@ -63,10 +64,10 @@
                 max-width: 90%;
             }
             h1 {
-                font-size: 2.5rem;
+                font-size: 2.4rem; /* Scaled down slightly to perfectly frame portrait screens */
             }
             p {
-                font-size: 1.2rem;
+                font-size: 1.15rem;
             }
         }
     </style>
